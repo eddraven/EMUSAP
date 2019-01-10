@@ -18,6 +18,16 @@ class IndexController {
 		View::render($this,"index/categories",array("meta"=>$meta));
 	}
 
+	public function peopleAction(){
+		$meta = array("title"=>".: HOSPITAL :.");
+		View::render($this,"index/people",array("meta"=>$meta));
+	}
+
+	public function msgsAction(){
+		$meta = array("title"=>".: HOSPITAL :.");
+		View::render($this,"index/msgs",array("meta"=>$meta));
+	}
+
 	
 
 }
