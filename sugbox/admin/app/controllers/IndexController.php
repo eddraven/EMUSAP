@@ -13,6 +13,11 @@ class IndexController {
 		View::render($this,"index/units",array("meta"=>$meta));
 	}
 
+	public function categoriesAction(){
+		$meta = array("title"=>".: HOSPITAL :.");
+		View::render($this,"index/categories",array("meta"=>$meta));
+	}
+
 	
 
 }
