@@ -1,5 +1,5 @@
 <?php
-$persons = ItemData::getAll();
+$persons = PersonData::getAll();
 ?>
       <div class="page-content">
 
@@ -9,13 +9,14 @@ $persons = ItemData::getAll();
 
           <div class="row">
             <div class="col-lg-12">
-            <h1>Mensajes</h1>
+<a href="./?r=team/newclient" class="btn btn-default pull-right">Agregar Persona</a>
+            <h1>Personas</h1>
 <?php if(count($persons)==0):?>
-  <p class="alert alert-danger">No hay Mensajes</p>
+  <p class="alert alert-danger">No hay personas</p>
 <?php endif; ?>
               <div class="widget">
                 <div class="widget-title">
-                  <i class="fa fa-th-list"></i> Mensajes
+                  <i class="fa fa-th-list"></i> Personas
                 </div>
                 <div class="widget-body no-padding">
 
@@ -24,40 +25,31 @@ $persons = ItemData::getAll();
                     <table class="table">
                     <thead>
                     <th></th>
-                      <th>Mensaje</th>
+                      <th>Numero</th>
                       <th>Nombre</th>
-                      <th>Tipo</th>
+                      <th>Unidad Medica</th>
+                      <th>Categoria</th>
+                      <th>Puesto</th>
                       <th>Direccion</th>
                       <th>Telefono</th>
-                      <th>Departamento</th>
-                      <th>Fecha</th>
+                      <th></th>
                     </thead>
                       <tbody>
                       <?php foreach($persons as $autor):?>
                         <tr>
                         <td style="width:30px;">
-                        
                         </td>
-                        <td><?php echo $autor->msg; ?></td>
-                        <td><?php echo $autor->fullname; ?></td>
-                        <td>
-                        <?php
-                        switch ($autor->kind) {
-                          case 1: echo "Queja";      break;
-                          case 2: echo "Sugerencia";      break;
-                          case 3: echo "Agradecimiento";      break;
-                          
-                          default:
-                            # code...
-                            break;
-                        }
-                        ?>
-                        </td>
-
-                        <td><?php echo $autor->address; ?></td>
-                        <td><?php echo $autor->phone; ?></td>
+                        <td><?php echo $autor->no; ?></td>
+                        <td><?php echo $autor->name." ".$autor->lastname; ?></td>
                         <td><?php echo $autor->getTeam()->name; ?></td>
-                        <td><?php echo $autor->created_at;?></td>
+                        <td><?php echo $autor->getCategory()->name; ?></td>
+                        <td><?php echo $autor->job; ?></td>
+                        <td><?php echo $autor->address1; ?></td>
+                        <td><?php echo $autor->phone1; ?></td>
+                        <td style="width:180px;">
+                        <a href="./?r=person/edit&id=<?php echo $autor->id; ?>" class="btn btn-warning btn-xs">Editar</a>
+                        <a href="./?r=person/del&id=<?php echo $autor->id; ?>" class="btn btn-danger btn-xs">Eliminar</a>
+                        </td>
                         </tr>
                       <?php endforeach; ?>
                       </tbody>
