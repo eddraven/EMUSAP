@@ -28,7 +28,18 @@ class IndexController {
 		View::render($this,"index/msgs",array("meta"=>$meta));
 	}
 
-	
+	public function homeAction(){
+		$meta = array("title"=>".: HOSPITAL :.");
+		Session::setFlashMsg("mensaje","Hola wey");
+		Core::redir("./?r=index/index");
+		//View::render($this,"index",array("meta"=>$meta));
+	}
+
+	public function view2Action(){
+		$meta = array("title"=>".: HOSPITAL :.");
+		Session::setFlashMsg("mensaje","Hola wey");
+		View::render2($this,"index/index",array("meta"=>$meta));
+	}
 
 }
 
