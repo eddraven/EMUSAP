@@ -42,7 +42,26 @@ class TeamController {
 	}
 
 
-	
+	public function addAction(){
+		$criteria = new Criteria("team");
+
+		$criteria->insert(array(
+			"name"=>"\"$_POST[name]\""
+			));
+		Core::redir("./?r=index/units");
+	}
+
+	public function addcatAction(){
+		$criteria = new Criteria("category");
+
+		$criteria->insert(array(
+			"name"=>"\"$_POST[name]\""
+			));
+		Core::redir("./?r=index/categories");
+	}
+
+
+		
 
 }
 
