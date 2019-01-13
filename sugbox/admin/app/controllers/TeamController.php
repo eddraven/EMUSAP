@@ -19,7 +19,20 @@ class TeamController {
 		View::render2($this,"team/new",array("meta"=>$meta));
 	}
 
+	public function newcatAction(){
+		$meta = array("title"=>".: SORIANA :.");
+		View::render2($this,"team/newcat",array("meta"=>$meta));
+	}
+
+
+	public function newclientAction(){
+		$meta = array("title"=>".: SORIANA :.");
+		View::render2($this,"team/newclient",array("meta"=>$meta));
+	}
+
+
 	
+
 }
 
 
