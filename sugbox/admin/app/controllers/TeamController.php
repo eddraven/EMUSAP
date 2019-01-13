@@ -31,6 +31,17 @@ class TeamController {
 	}
 
 
+	public function editAction(){
+		$meta = array("title"=>".: SORIANA :.");
+		View::render2($this,"team/edit",array("meta"=>$meta));
+	}
+
+	public function editcatAction(){
+		$meta = array("title"=>".: SORIANA :.");
+		View::render2($this,"team/editcat",array("meta"=>$meta));
+	}
+
+
 	
 
 }
