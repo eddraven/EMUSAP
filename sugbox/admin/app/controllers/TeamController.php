@@ -61,7 +61,23 @@ class TeamController {
 	}
 
 
-		
+	public function updAction(){
+		$criteria = new Criteria("team");
+
+		$criteria->update(array(
+			"name"=>"\"$_POST[name]\""
+			),"id=".$_POST["id"]);
+		Core::redir("./?r=team/edit&id=".$_POST["id"]);
+	}	
+
+	public function updcatAction(){
+		$criteria = new Criteria("category");
+
+		$criteria->update(array(
+			"name"=>"\"$_POST[name]\""
+			),"id=".$_POST["id"]);
+		Core::redir("./?r=team/editcat&id=".$_POST["id"]);
+	}	
 
 }
 
