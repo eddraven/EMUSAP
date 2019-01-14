@@ -1,7 +1,0 @@
-la ruta como debe quedar , o donde tienes q subir seria asi
-
-sugbox/admin/res               <----------- dentro de esa ruta debes pegar o subir los archivos q se t envio
-
-
-no lo subas todo al porraso 
-tu dividete los archivos para 4 a mas comits
