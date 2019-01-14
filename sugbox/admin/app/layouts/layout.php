@@ -10,10 +10,10 @@
   <link rel="stylesheet" type="text/css" href="res/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="res/dashboard/dashboard.css">
   <link rel="stylesheet" type="text/css" href="res/themes/black.css">
-  <!--
+  
   <link rel="stylesheet" type="text/css" href="css/themes/green.css">
   <link rel="stylesheet" type="text/css" href="css/themes/red.css">
-  -->
+  
 
   <script type="text/javascript" src="res/jquery.min.js"></script>
 
@@ -89,17 +89,18 @@ if(isset($_SESSION["admin_id"])):?>
 
 <?php 
   require_once(View::$content);
-  include "admin/app/autoload.php";
+  //include "app/autoload.php";
 ?>
 
 
     </div><!-- End Content Wrapper -->
   </div><!-- End Page Wrapper -->
 <?php else:?>
-<div class="collapse navbar-collapse navbar-ex1-collapse">
+<div class="collapse navbar-collapse navbar-ex1-collapse" style="background: #413a38; color: rgba(255, 255, 255, 0.6); font-weight: normal;">
     <ul class="nav navbar-nav">
-      <li><a href="../index.php">INICIO</a></li>
-      <li><a href="./">GESTION</a></li>
+      <li><a href="./" style="color: white"><b>EMUSAP</b></a></li>
+      <li><a href="../index.php" style="color: white">INICIO</a></li>
+      <li><a href="./" style="color: white">GESTION</a></li>
     </ul>
  </div><!-- /.navbar-collapse -->
 <br><br><br><br><br><br>
@@ -129,7 +130,17 @@ ACCESO ADMINISTRADOR
 </div>
 </div>
 </div>
-
+<div style="position: absolute; bottom: 0px; width: 100%;">
+  <footer style="background: #413a38; color: rgba(255, 255, 255, 0.6); font-weight: normal; padding: 30px 15px; ">
+        <div class="footer-content text-center">
+            <div class="container">
+                <div class="copyright">E.P.S. EMUSAP - ABANCAY S.A.C</div>  
+                <div class="copyright">Todos los derechos reservados</div>
+                <div class="copyright">Telefono: 321080</div>
+            </div>
+        </div>
+    </footer>
+</div>
 <?php endif; ?>
   <script src="res/bootstrap3/js/bootstrap.min.js"></script>
 </body>

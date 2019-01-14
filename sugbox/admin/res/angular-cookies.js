@@ -20,7 +20,7 @@
  * See {@link ngCookies.$cookies `$cookies`} and
  * {@link ngCookies.$cookieStore `$cookieStore`} for usage.
  */
-////////////// resuelto //////////
+
 
 angular.module('ngCookies', ['ng']).
   /**

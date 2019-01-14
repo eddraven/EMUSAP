@@ -39,7 +39,7 @@ class PersonController {
 			));
 	Core::redir("./?r=team/open&id=$_POST[sucursal_id]");
 	}
-	
+
 	public function updateAction(){
 		$criteria = new Criteria("person");
 		$person=PersonData::getById($_POST["id"]);

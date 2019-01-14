@@ -14,13 +14,14 @@ include "admin/app/models/PersonData.php";
 
   <link rel="stylesheet" type="text/css" href="admin/res/bootstrap3/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="admin/res/font-awesome/css/font-awesome.min.css">
+  
 
   <script type="text/javascript" src="admin/res/jquery.min.js"></script>
 
 </head>
 <body >
-<nav class="navbar navbar-default" role="navigation">
-<div class="container">
+<nav class="navbar navbar-default" role="navigation" style="background: #413a38; color: rgba(255, 255, 255, 0.6); font-weight: normal;">
+<div class="container" >
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -29,14 +30,14 @@ include "admin/app/models/PersonData.php";
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="./"><b>EMUSAP</b></a>
+    <a class="navbar-brand" href="./" style="color: white"><b>EMUSAP</b></a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="./">INICIO</a></li>
-      <li><a href="admin">GESTION</a></li>
+      <li><a href="./" style="color: white">INICIO</a></li>
+      <li><a href="admin" style="color: white">GESTION</a></li>
     </ul>
  </div><!-- /.navbar-collapse -->
  </div>
@@ -44,14 +45,16 @@ include "admin/app/models/PersonData.php";
 
 <div class="container">
 <div class="row">
-<div class="col-md-9"></div>
-<div class="col-md-3">
+<div class="col-md-9">
+  <img src="emusap.png" style="width: 70%; padding-top: 50px;">
+</div>
+<div class="col-md-3"  style="padding-top: 100px;">
 
 
 
 
   <!-- Button trigger modal -->
-  <a data-toggle="modal" href="#myModal" class="btn btn-warning ">Enviar queja o sugerencia</a>
+  <a data-toggle="modal" href="#myModal" class="btn btn-warning" style="width: 260px; height: 80px; font-size: 18px; padding-top: 23px;">Enviar queja o sugerencia</a>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -148,7 +151,17 @@ include "admin/app/models/PersonData.php";
 </div>
 </div>
 </div>
-
+<div style="position: absolute; bottom: 0px; width: 100%;">
+  <footer style="background: #413a38; color: rgba(255, 255, 255, 0.6); font-weight: normal; padding: 30px 15px; ">
+        <div class="footer-content text-center">
+            <div class="container">
+                <div class="copyright">E.P.S. EMUSAP - ABANCAY S.A.C</div>  
+                <div class="copyright">Todos los derechos reservados</div>
+                <div class="copyright">Telefono: 321080</div>
+            </div>
+        </div>
+    </footer>
+</div>
   <script src="admin/res/bootstrap3/js/bootstrap.min.js"></script>
 </body>
 </html>
